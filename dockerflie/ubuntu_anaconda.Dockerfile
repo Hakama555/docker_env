@@ -1,5 +1,7 @@
+# escape=`
+
 FROM ubuntu:20.04
-# os 
+CMD [ "executable" ]
 
 # LABEL version = "1.0"
 # LABEL discription = "This is environment for anaconda on Ubuntu:20.04"
