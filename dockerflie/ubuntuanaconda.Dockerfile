@@ -1,13 +1,6 @@
-# escape=`
-
-FROM ubuntu:20.04
-CMD [ "executable" ]
-
-# LABEL version = "1.0"
-# LABEL discription = "This is environment for anaconda on Ubuntu:20.04"
-
-# RUN apt_get update \
- #   apt_get install vim  
-#  install vim and updat
-
-
+FROM node:12-alpine
+RUN apk add --no-cache python g++ make
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
