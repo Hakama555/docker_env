@@ -1,6 +1,7 @@
-FROM node:12-alpine
-RUN apk add --no-cache python g++ make
-WORKDIR /app
-COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
+FROM ubuntu
+
+WORKDIR E:\personal_products\env\docker_env\dockerflie
+COPY helloworld.py .
+RUN apt-get intall update\
+    apt-get install python3
+CMD [ "python3", "helloworld.py" ]
